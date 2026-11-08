@@ -1202,6 +1202,15 @@
           "format": "uint",
           "minimum": 1
         },
+        "mutantsPerLine": {
+          "description": "The maximum number of mutants on one source line. The plan keeps the\nmost productive mutants of the line (relational, condition,\narithmetic and logical operators first). The others are `pending`\nwith the reason `sampled-out`. Unset keeps each mutant.\n`--mutants-per-line` wins.",
+          "type": [
+            "integer",
+            "null"
+          ],
+          "format": "uint",
+          "minimum": 1
+        },
         "typecheck": {
           "description": "Type-check each survived mutant through the TypeScript-Go companion\nof `--type-aware`. A survivor that does not type-check becomes\n`compile_error` and does not count in the score. Unset or `false`\nchecks no survivor. `--typecheck` turns the check on.",
           "type": [
