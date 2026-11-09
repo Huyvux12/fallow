@@ -261,6 +261,7 @@ mod tests {
             framework_config_checked: false,
             skipped_files: Vec::new(),
             unmatched_paths: Vec::new(),
+            changed_test_files: Vec::new(),
         }
     }
 
