@@ -1211,6 +1211,13 @@
           "format": "uint",
           "minimum": 1
         },
+        "functionScope": {
+          "description": "Widen each changed line to the whole function that holds it, so that a\nchange to a parameter or a signature selects the mutants of the\nfunction. Only the changed-code scope uses it. Unset or `false` mutates\nthe changed lines only. `--function-scope` turns it on.",
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
         "typecheck": {
           "description": "Type-check each survived mutant through the TypeScript-Go companion\nof `--type-aware`. A survivor that does not type-check becomes\n`compile_error` and does not count in the score. Unset or `false`\nchecks no survivor. `--typecheck` turns the check on.",
           "type": [
